@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io</title>
+</head>
+
+<body>
+    <p>Running</p>
+    <!-- <div id="viewTime">
+
+    </div> -->
+    <!-- <input type="text" name="" id="name" placeholder="Name">
+    <button onclick="nameData()">Submit</button> -->
+    <div id="broadcust">
+
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        let socket = io('/buy');
+        socket.on('MyEvent', (data) => {
+            console.log("Hello",data);
+            document.getElementById('broadcust').innerHTML = data;
+        })
+        // let socket = io('/sell');
+        // socket.on('myEmit', (data) => {
+        //     document.getElementById('broadcust').innerHTML = data;
+        // })
+        // socket.on('Monir',(msg)=>{
+        // document.write(msg)
+        //     document.getElementById('viewTime').innerHTML=msg
+        // })
+        // const nameData = () => {
+        // const data=document.getElementById('name').value;
+        // const data=document.getElementById('name').value;
+        // alert(data)
+        // socket.send(data)
+        // }
+
+    </script>
+
+</body>
+
+</html>
